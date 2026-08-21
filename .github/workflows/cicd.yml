@@ -48,6 +48,7 @@ jobs:
 
     env:
       ARTIFACT_BUCKET: track2-day21-2a202601434-bucket
+      GOOGLE_CLOUD_PROJECT: track2-day21-2a202601434
 
     steps:
       - uses: actions/checkout@v4
