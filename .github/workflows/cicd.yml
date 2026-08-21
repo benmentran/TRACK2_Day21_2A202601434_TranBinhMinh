@@ -65,9 +65,6 @@ jobs:
           echo '${{ secrets.STORAGE_CREDENTIALS }}' > /tmp/sa-key.json
           echo "GOOGLE_APPLICATION_CREDENTIALS=/tmp/sa-key.json" >> $GITHUB_ENV
 
-      - name: Configure DVC remote credentials
-        run: dvc remote modify labstore credentialpath /tmp/sa-key.json
-
       - name: Pull data with DVC
         run: dvc pull data/train_batch1.csv data/holdout.csv
 
